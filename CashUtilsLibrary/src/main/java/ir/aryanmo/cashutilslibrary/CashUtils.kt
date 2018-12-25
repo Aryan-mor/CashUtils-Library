@@ -8,7 +8,7 @@ object CashUtils {
 
     fun saveFile(cashUri: String, image: Bitmap): Boolean {
         return try {
-//            CashStore.instance!!.saveCacheFile(cashUri, image)
+            CashStore.instance!!.saveCacheFile(cashUri, image)
             true
         } catch (e: Exception) {
             logError("saveFile", e)
@@ -18,8 +18,7 @@ object CashUtils {
 
     fun getFile(cashUri: String): Bitmap? {
         return try {
-            return null
-//            CashStore.instance!!.getCacheFile(cashUri)
+            CashStore.instance!!.getCacheFile(cashUri)
         } catch (e: Exception) {
             logError("getFile", e)
             null
